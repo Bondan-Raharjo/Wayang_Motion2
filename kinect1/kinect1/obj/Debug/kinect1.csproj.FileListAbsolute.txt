@@ -1,0 +1,33 @@
+c:\users\home\documents\visual studio 2012\Projects\kinect1\kinect1\bin\Debug\kinect1.exe.config
+c:\users\home\documents\visual studio 2012\Projects\kinect1\kinect1\bin\Debug\kinect1.exe
+c:\users\home\documents\visual studio 2012\Projects\kinect1\kinect1\bin\Debug\kinect1.pdb
+c:\users\home\documents\visual studio 2012\Projects\kinect1\kinect1\obj\Debug\kinect1.csprojResolveAssemblyReference.cache
+c:\users\home\documents\visual studio 2012\Projects\kinect1\kinect1\obj\Debug\MainWindow.baml
+c:\users\home\documents\visual studio 2012\Projects\kinect1\kinect1\obj\Debug\MainWindow.g.cs
+c:\users\home\documents\visual studio 2012\Projects\kinect1\kinect1\obj\Debug\App.g.cs
+c:\users\home\documents\visual studio 2012\Projects\kinect1\kinect1\obj\Debug\kinect1_MarkupCompile.cache
+c:\users\home\documents\visual studio 2012\Projects\kinect1\kinect1\obj\Debug\kinect1.g.resources
+c:\users\home\documents\visual studio 2012\Projects\kinect1\kinect1\obj\Debug\kinect1.Properties.Resources.resources
+c:\users\home\documents\visual studio 2012\Projects\kinect1\kinect1\obj\Debug\kinect1.csproj.GenerateResource.Cache
+c:\users\home\documents\visual studio 2012\Projects\kinect1\kinect1\obj\Debug\kinect1.exe
+c:\users\home\documents\visual studio 2012\Projects\kinect1\kinect1\obj\Debug\kinect1.pdb
+F:\kinect1\kinect1\bin\Debug\kinect1.exe.config
+F:\kinect1\kinect1\obj\Debug\kinect1.exe
+F:\kinect1\kinect1\obj\Debug\kinect1.pdb
+C:\Users\MoboThree\Documents\Visual Studio 2012\Projects\kinect1\kinect1\bin\Debug\kinect1.exe.config
+C:\Users\MoboThree\Documents\Visual Studio 2012\Projects\kinect1\kinect1\obj\Debug\kinect1.exe
+C:\Users\MoboThree\Documents\Visual Studio 2012\Projects\kinect1\kinect1\obj\Debug\kinect1.pdb
+C:\Users\MoboThree\Documents\Visual Studio 2012\Projects\kinect1\kinect1\bin\Debug\kinect1.exe
+C:\Users\MoboThree\Documents\Visual Studio 2012\Projects\kinect1\kinect1\bin\Debug\kinect1.pdb
+C:\Users\MoboThree\Documents\Visual Studio 2012\Projects\kinect1\kinect1\obj\Debug\kinect1.csprojResolveAssemblyReference.cache
+C:\Users\MoboThree\Documents\Visual Studio 2012\Projects\kinect1\kinect1\obj\Debug\MainWindow.baml
+C:\Users\MoboThree\Documents\Visual Studio 2012\Projects\kinect1\kinect1\obj\Debug\MainWindow.g.cs
+C:\Users\MoboThree\Documents\Visual Studio 2012\Projects\kinect1\kinect1\obj\Debug\App.g.cs
+C:\Users\MoboThree\Documents\Visual Studio 2012\Projects\kinect1\kinect1\obj\Debug\kinect1_MarkupCompile.cache
+C:\Users\MoboThree\Documents\Visual Studio 2012\Projects\kinect1\kinect1\obj\Debug\kinect1.g.resources
+C:\Users\MoboThree\Documents\Visual Studio 2012\Projects\kinect1\kinect1\obj\Debug\kinect1.Properties.Resources.resources
+C:\Users\MoboThree\Documents\Visual Studio 2012\Projects\kinect1\kinect1\obj\Debug\kinect1.csproj.GenerateResource.Cache
+C:\Users\MoboThree\Documents\Visual Studio 2012\Projects\kinect1\kinect1\bin\Debug\kinect1.exe.manifest
+C:\Users\MoboThree\Documents\Visual Studio 2012\Projects\kinect1\kinect1\bin\Debug\kinect1.application
+C:\Users\MoboThree\Documents\Visual Studio 2012\Projects\kinect1\kinect1\obj\Debug\kinect1.exe.manifest
+C:\Users\MoboThree\Documents\Visual Studio 2012\Projects\kinect1\kinect1\obj\Debug\kinect1.application

@@ -1,0 +1,171 @@
+﻿<Window x:Class="kinect1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="750" Width="995" Loaded="Window_Loaded" Closing="Window_Closing_1">
+    <Grid>
+        <Canvas x:Name="canvas" HorizontalAlignment="Left" Height="542" VerticalAlignment="Top" Width="640" Margin="0,0,0,0">
+            <Image x:Name="source" Height="480" Width="640" Canvas.Left="0" Canvas.Top="0"/>
+            <Button x:Name="nScene" Content="Next Scene" Canvas.Left="475" Canvas.Top="485" Width="160" Height="27" Click="nScene_Click"/>
+            <Button x:Name="pScene" Content="Previous Scene" Canvas.Top="485" Width="160" Height="27" Click="pScene_Click" Canvas.Left="5"/>
+            <Button Content="Reset" Canvas.Left="275" Canvas.Top="485" Width="90" Height="27" Click="Button_Click_98"/>
+            <Button x:Name="showP1" Content="P1" Canvas.Left="170" Canvas.Top="485" Width="100" Click="showP1_Click" Background="Red" Height="27"/>
+            <Button x:Name="showP2" Content="P2" Canvas.Left="370" Canvas.Top="485" Width="100" Click="showP2_Click" Background="Red" Height="27"/>
+            <Image x:Name="KakiKiriAtas1" Height="100" Canvas.Left="54" Canvas.Top="319" Width="50" RenderTransformOrigin="0.5,0.5" Stretch="Fill"/>
+            <Image x:Name="KakiKiriBawah1" Height="100" Canvas.Left="132" Canvas.Top="370" Width="50" RenderTransformOrigin="0.5,0.5" Stretch="Fill"/>
+            <Image x:Name="KakiKananAtas1" Height="100" Canvas.Left="303" Canvas.Top="319" Width="50" RenderTransformOrigin="0.5,0.5" Stretch="Fill"/>
+            <Image x:Name="KakiKananBawah1" Height="100" Canvas.Left="460" Canvas.Top="370" Width="50" RenderTransformOrigin="0.5,0.5" Stretch="Fill"/>
+            <Image x:Name="Tubuh1" Height="100" Canvas.Left="279" Canvas.Top="204" Width="80" RenderTransformOrigin="0.5,0.5" Stretch="Fill"/>
+            <Image x:Name="Kepala1" Height="200" Canvas.Left="279" Canvas.Top="23" Width="180" RenderTransformOrigin="0.5,0.5" Stretch="Fill"/>
+            <Image x:Name="LenganKananAtas1" Height="100" Canvas.Left="389" Canvas.Top="204" Width="50" RenderTransformOrigin="0.5,0.5" Stretch="Fill"/>
+            <Image x:Name="LenganKananBawah1" Height="100" Canvas.Left="460" Canvas.Top="309" Width="50" RenderTransformOrigin="0.5,0.5" Stretch="Fill"/>
+            <Image x:Name="LenganKiriAtas1" Height="100" Canvas.Left="182" Canvas.Top="184" Width="50" RenderTransformOrigin="0.5,0.5" Stretch="Fill"/>
+            <Image x:Name="LenganKiriBawah1" Height="100" Canvas.Left="132" Canvas.Top="284" Width="50" RenderTransformOrigin="0.5,0.5" Stretch="Fill"/>
+
+            <Image x:Name="KakiKiriAtas2" Height="100" Canvas.Left="54" Canvas.Top="319" Width="50" RenderTransformOrigin="0.5,0.5" Stretch="Fill"/>
+            <Image x:Name="KakiKiriBawah2" Height="100" Canvas.Left="132" Canvas.Top="370" Width="50" RenderTransformOrigin="0.5,0.5" Stretch="Fill"/>
+            <Image x:Name="KakiKananAtas2" Height="100" Canvas.Left="303" Canvas.Top="319" Width="50" RenderTransformOrigin="0.5,0.5" Stretch="Fill"/>
+            <Image x:Name="KakiKananBawah2" Height="100" Canvas.Left="460" Canvas.Top="370" Width="50" RenderTransformOrigin="0.5,0.5" Stretch="Fill"/>
+            <Image x:Name="Tubuh2" Height="100" Canvas.Left="279" Canvas.Top="204" Width="80" RenderTransformOrigin="0.5,0.5" Stretch="Fill"/>
+            <Image x:Name="Kepala2" Height="100" Canvas.Left="279" Canvas.Top="23" Width="90" RenderTransformOrigin="0.5,0.5" Stretch="Fill"/>
+            <Image x:Name="LenganKananAtas2" Height="100" Canvas.Left="389" Canvas.Top="204" Width="50" RenderTransformOrigin="0.5,0.5" Stretch="Fill"/>
+            <Image x:Name="LenganKananBawah2" Height="100" Canvas.Left="460" Canvas.Top="309" Width="50" RenderTransformOrigin="0.5,0.5" Stretch="Fill"/>
+            <Image x:Name="LenganKiriAtas2" Height="100" Canvas.Left="182" Canvas.Top="184" Width="50" RenderTransformOrigin="0.5,0.5" Stretch="Fill"/>
+            <Image x:Name="LenganKiriBawah2" Height="100" Canvas.Left="132" Canvas.Top="284" Width="50" RenderTransformOrigin="0.5,0.5" Stretch="Fill"/>
+        </Canvas>
+        <Canvas x:Name="komponen" HorizontalAlignment="Left" VerticalAlignment="Top" Height="719" Width="990">
+
+            <Ellipse x:Name="el1" Fill="#FFBB0B0B" Height="20" Canvas.Left="402" Stroke="Black" Canvas.Top="284" Width="20" Visibility="Hidden" RenderTransformOrigin="0.5,0.5"/>
+            <Ellipse x:Name="el2" Fill="#FF0909E8" Height="20" Canvas.Left="460" Stroke="Black" Canvas.Top="284" Width="20" Visibility="Hidden" RenderTransformOrigin="0.5,0.5"/>
+            <Ellipse x:Name="el3" Fill="#FF178000" Height="20" Canvas.Left="514" Stroke="Black" Canvas.Top="284" Width="20" Visibility="Hidden" RenderTransformOrigin="0.5,0.5"/>
+
+            <Image x:Name="mask" Height="90" Canvas.Left="227" Canvas.Top="569" Width="120" RenderTransformOrigin="0.5,0.5" Stretch="Fill"/>
+            <GroupBox Header="Player 1" Canvas.Left="645" Canvas.Top="10" Width="150" Height="663"/>
+            <GroupBox Header="Player 2" Canvas.Left="800" Canvas.Top="10" Width="150" Height="663"/>
+            <Label Content="Kepala" Canvas.Left="699" Canvas.Top="25"/>
+            <Button Content="+" Canvas.Left="687" Canvas.Top="54" Width="30" Click="Button_Click_1"/>
+            <Button Content="-" Canvas.Left="652" Canvas.Top="54" Width="30" Click="Button_Click_2"/>
+            <Label Content="Tubuh" Canvas.Left="699" Canvas.Top="77"/>
+            <Button Content="+" Canvas.Left="687" Canvas.Top="106" Width="30" Click="Button_Click_3"/>
+            <Button Content="-" Canvas.Left="652" Canvas.Top="106" Width="30" Click="Button_Click_4"/>
+            <Label Content="Lengan Kanan" Canvas.Left="676" Canvas.Top="130"/>
+            <Button Content="+" Canvas.Left="687" Canvas.Top="159" Width="30" Click="Button_Click_5"/>
+            <Button Content="-" Canvas.Left="652" Canvas.Top="159" Width="30" Click="Button_Click_6"/>
+            <Label Content="Tangan Kanan" Canvas.Left="676" Canvas.Top="182"/>
+            <Button Content="+" Canvas.Left="687" Canvas.Top="211" Width="30" Click="Button_Click_7"/>
+            <Button Content="-" Canvas.Left="652" Canvas.Top="211" Width="30" Click="Button_Click_8"/>
+            <Label Content="Lengan Kiri" Canvas.Left="685" Canvas.Top="234"/>
+            <Button Content="+" Canvas.Left="687" Canvas.Top="263" Width="30" Click="Button_Click_9"/>
+            <Button Content="-" Canvas.Left="652" Canvas.Top="263" Width="30" Click="Button_Click_10"/>
+            <Label Content="Tangan Kiri" Canvas.Left="685" Canvas.Top="286"/>
+            <Button Content="+" Canvas.Left="687" Canvas.Top="315" Width="30" Click="Button_Click_11"/>
+            <Button Content="-" Canvas.Left="652" Canvas.Top="315" Width="30" Click="Button_Click_12"/>
+            <Label Content="Paha Kanan" Canvas.Left="684" Canvas.Top="338"/>
+            <Button Content="+" Canvas.Left="687" Canvas.Top="367" Width="30" Click="Button_Click_13"/>
+            <Button Content="-" Canvas.Left="652" Canvas.Top="367" Width="30" Click="Button_Click_14"/>
+            <Label Content="Kaki Kanan" Canvas.Left="684" Canvas.Top="390"/>
+            <Button Content="+" Canvas.Left="687" Canvas.Top="419" Width="30" Click="Button_Click_15"/>
+            <Button Content="-" Canvas.Left="652" Canvas.Top="419" Width="30" Click="Button_Click_16"/>
+            <Label Content="Paha Kiri" Canvas.Left="692" Canvas.Top="441"/>
+            <Button Content="+" Canvas.Left="687" Canvas.Top="470" Width="30" Click="Button_Click_17"/>
+            <Button Content="-" Canvas.Left="652" Canvas.Top="470" Width="30" Click="Button_Click_18"/>
+            <Label Content="Kaki Kiri" Canvas.Left="693" Canvas.Top="493"/>
+            <Button Content="+" Canvas.Left="687" Canvas.Top="522" Width="30" Click="Button_Click_19"/>
+            <Button Content="-" Canvas.Left="652" Canvas.Top="522" Width="30" Click="Button_Click_20"/>
+            <Label Content="Kepala" Canvas.Left="855" Canvas.Top="25"/>
+            <Button Content="+" Canvas.Left="843" Canvas.Top="54" Width="30" Click="Button_Click_21"/>
+            <Button Content="-" Canvas.Left="808" Canvas.Top="54" Width="30" Click="Button_Click_22"/>
+            <Label Content="Tubuh" Canvas.Left="855" Canvas.Top="77"/>
+            <Button Content="+" Canvas.Left="843" Canvas.Top="106" Width="30" Click="Button_Click_23"/>
+            <Button Content="-" Canvas.Left="808" Canvas.Top="106" Width="30" Click="Button_Click_24"/>
+            <Label Content="Lengan Kanan" Canvas.Left="832" Canvas.Top="130"/>
+            <Button Content="+" Canvas.Left="843" Canvas.Top="159" Width="30" Click="Button_Click_25"/>
+            <Button Content="-" Canvas.Left="808" Canvas.Top="159" Width="30" Click="Button_Click_26"/>
+            <Label Content="Tangan Kanan" Canvas.Left="832" Canvas.Top="182"/>
+            <Button Content="+" Canvas.Left="843" Canvas.Top="211" Width="30" Click="Button_Click_27"/>
+            <Button Content="-" Canvas.Left="808" Canvas.Top="211" Width="30" Click="Button_Click_28"/>
+            <Label Content="Lengan Kiri" Canvas.Left="841" Canvas.Top="234"/>
+            <Button Content="+" Canvas.Left="843" Canvas.Top="263" Width="30" Click="Button_Click_29"/>
+            <Button Content="-" Canvas.Left="808" Canvas.Top="263" Width="30" Click="Button_Click_30"/>
+            <Label Content="Tangan Kiri" Canvas.Left="841" Canvas.Top="286"/>
+            <Button Content="+" Canvas.Left="843" Canvas.Top="315" Width="30" Click="Button_Click_31"/>
+            <Button Content="-" Canvas.Left="808" Canvas.Top="315" Width="30" Click="Button_Click_32"/>
+            <Label Content="Paha Kanan" Canvas.Left="840" Canvas.Top="338"/>
+            <Button Content="+" Canvas.Left="843" Canvas.Top="367" Width="30" Click="Button_Click_33"/>
+            <Button Content="-" Canvas.Left="808" Canvas.Top="367" Width="30" Click="Button_Click_34"/>
+            <Label Content="Kaki Kanan" Canvas.Left="840" Canvas.Top="390"/>
+            <Button Content="+" Canvas.Left="843" Canvas.Top="419" Width="30" Click="Button_Click_35"/>
+            <Button Content="-" Canvas.Left="808" Canvas.Top="419" Width="30" Click="Button_Click_36"/>
+            <Label Content="Paha Kiri" Canvas.Left="848" Canvas.Top="441"/>
+            <Button Content="+" Canvas.Left="843" Canvas.Top="470" Width="30" Click="Button_Click_37"/>
+            <Button Content="-" Canvas.Left="808" Canvas.Top="470" Width="30" Click="Button_Click_38"/>
+            <Label Content="Kaki Kiri" Canvas.Left="849" Canvas.Top="493"/>
+            <Button Content="+" Canvas.Left="843" Canvas.Top="522" Width="30" Click="Button_Click_39"/>
+            <Button Content="-" Canvas.Left="808" Canvas.Top="522" Width="30" Click="Button_Click_40"/>
+            <Button Content="-" Canvas.Left="722" Canvas.Top="54" Width="30" Click="Button_Click_42"/>
+            <Button Content="+" Canvas.Left="757" Canvas.Top="54" Width="30" Click="Button_Click_41"/>
+            <Button Content="-" Canvas.Left="722" Canvas.Top="106" Width="30" Click="Button_Click_44"/>
+            <Button Content="+" Canvas.Left="757" Canvas.Top="106" Width="30" Click="Button_Click_43"/>
+            <Button Content="+" Canvas.Left="757" Canvas.Top="159" Width="30" Click="Button_Click_45"/>
+            <Button Content="-" Canvas.Left="722" Canvas.Top="159" Width="30" Click="Button_Click_46"/>
+            <Button Content="+" Canvas.Left="757" Canvas.Top="211" Width="30" Click="Button_Click_47"/>
+            <Button Content="-" Canvas.Left="722" Canvas.Top="211" Width="30" Click="Button_Click_48"/>
+            <Button Content="+" Canvas.Left="757" Canvas.Top="263" Width="30" Click="Button_Click_49"/>
+            <Button Content="-" Canvas.Left="722" Canvas.Top="263" Width="30" Click="Button_Click_50"/>
+            <Button Content="+" Canvas.Left="757" Canvas.Top="315" Width="30" Click="Button_Click_51"/>
+            <Button Content="-" Canvas.Left="722" Canvas.Top="315" Width="30" Click="Button_Click_52"/>
+            <Button Content="+" Canvas.Left="757" Canvas.Top="367" Width="30" Click="Button_Click_53"/>
+            <Button Content="-" Canvas.Left="722" Canvas.Top="367" Width="30" Click="Button_Click_54"/>
+            <Button Content="+" Canvas.Left="757" Canvas.Top="419" Width="30" Click="Button_Click_55"/>
+            <Button Content="-" Canvas.Left="722" Canvas.Top="419" Width="30" Click="Button_Click_56"/>
+            <Button Content="+" Canvas.Left="757" Canvas.Top="470" Width="30" Click="Button_Click_57"/>
+            <Button Content="-" Canvas.Left="722" Canvas.Top="470" Width="30" Click="Button_Click_58"/>
+            <Button Content="+" Canvas.Left="757" Canvas.Top="522" Width="30" Click="Button_Click_59"/>
+            <Button Content="-" Canvas.Left="722" Canvas.Top="522" Width="30" Click="Button_Click_60"/>
+            <Label Content="Pundak" Canvas.Left="695" Canvas.Top="545"/>
+            <Button Content="+" Canvas.Left="687" Canvas.Top="573" Width="30" Click="Button_Click_63"/>
+            <Button Content="-" Canvas.Left="652" Canvas.Top="573" Width="30" Click="Button_Click_64"/>
+            <Button Content="+" Canvas.Left="757" Canvas.Top="573" Width="30" Click="Button_Click_61"/>
+            <Button Content="-" Canvas.Left="722" Canvas.Top="573" Width="30" Click="Button_Click_62"/>
+            <Label Content="Pinggang" Canvas.Left="689" Canvas.Top="591"/>
+            <Button Content="+" Canvas.Left="687" Canvas.Top="619" Width="30" Click="Button_Click_67"/>
+            <Button Content="-" Canvas.Left="652" Canvas.Top="619" Width="30" Click="Button_Click_68"/>
+            <Button Content="+" Canvas.Left="757" Canvas.Top="619" Width="30" Click="Button_Click_65"/>
+            <Button Content="-" Canvas.Left="722" Canvas.Top="619" Width="30" Click="Button_Click_66"/>
+            <Button Content="+" Canvas.Left="913" Canvas.Top="54" Width="30" Click="Button_Click_69"/>
+            <Button Content="-" Canvas.Left="878" Canvas.Top="54" Width="30" Click="Button_Click_70"/>
+            <Button Content="+" Canvas.Left="913" Canvas.Top="106" Width="30" Click="Button_Click_71"/>
+            <Button Content="-" Canvas.Left="878" Canvas.Top="106" Width="30" Click="Button_Click_72"/>
+            <Button Content="+" Canvas.Left="913" Canvas.Top="159" Width="30" Click="Button_Click_73"/>
+            <Button Content="-" Canvas.Left="878" Canvas.Top="159" Width="30" Click="Button_Click_74"/>
+            <Button Content="+" Canvas.Left="913" Canvas.Top="211" Width="30" Click="Button_Click_75"/>
+            <Button Content="-" Canvas.Left="878" Canvas.Top="211" Width="30" Click="Button_Click_76"/>
+            <Button Content="+" Canvas.Left="913" Canvas.Top="263" Width="30" Click="Button_Click_77"/>
+            <Button Content="-" Canvas.Left="878" Canvas.Top="263" Width="30" Click="Button_Click_78"/>
+            <Button Content="+" Canvas.Left="913" Canvas.Top="315" Width="30" Click="Button_Click_79"/>
+            <Button Content="-" Canvas.Left="878" Canvas.Top="315" Width="30" Click="Button_Click_80"/>
+            <Button Content="+" Canvas.Left="913" Canvas.Top="367" Width="30" Click="Button_Click_81"/>
+            <Button Content="-" Canvas.Left="878" Canvas.Top="367" Width="30" Click="Button_Click_82"/>
+            <Button Content="+" Canvas.Left="913" Canvas.Top="419" Width="30" Click="Button_Click_83"/>
+            <Button Content="-" Canvas.Left="878" Canvas.Top="419" Width="30" Click="Button_Click_84"/>
+            <Button Content="+" Canvas.Left="913" Canvas.Top="470" Width="30" Click="Button_Click_85"/>
+            <Button Content="-" Canvas.Left="878" Canvas.Top="470" Width="30" Click="Button_Click_86"/>
+            <Button Content="+" Canvas.Left="913" Canvas.Top="522" Width="30" Click="Button_Click_87"/>
+            <Button Content="-" Canvas.Left="878" Canvas.Top="522" Width="30" Click="Button_Click_88"/>
+            <Label Content="Pundak" Canvas.Left="849" Canvas.Top="544"/>
+            <Button Content="+" Canvas.Left="843" Canvas.Top="573" Width="30" Click="Button_Click_91"/>
+            <Button Content="-" Canvas.Left="808" Canvas.Top="573" Width="30" Click="Button_Click_92"/>
+            <Button Content="+" Canvas.Left="913" Canvas.Top="573" Width="30" Click="Button_Click_89"/>
+            <Button Content="-" Canvas.Left="878" Canvas.Top="573" Width="30" Click="Button_Click_90"/>
+            <Label Content="Pinggang" Height="26" Canvas.Left="846" Canvas.Top="590" Width="61"/>
+            <Button Content="+" Click="Button_Click_95" Height="20" Canvas.Left="843" Canvas.Top="619" Width="30"/>
+            <Button Content="-" Click="Button_Click_96" Height="20" Canvas.Left="808" Canvas.Top="619" Width="30"/>
+            <Button Content="+" Click="Button_Click_93" Height="20" Canvas.Left="913" Canvas.Top="619" Width="30"/>
+            <Button Content="-" Click="Button_Click_94" Height="20" Canvas.Left="878" Canvas.Top="619" Width="30"/>
+            <Button Content="Fullscreen" Canvas.Left="10" Canvas.Top="590" Width="75" Click="Button_Click_97"/>
+            <Button x:Name="saveCon1" Content="Save" Canvas.Left="652" Canvas.Top="644" Width="65" Click="saveCon1_Click"/>
+            <Button x:Name="loadCon1" Content="Load" Canvas.Left="722" Canvas.Top="644" Width="65" Click="loadCon1_Click"/>
+            <Button x:Name="saveCon2" Content="Save" Canvas.Left="808" Canvas.Top="644" Width="65" Click="saveCon2_Click"/>
+            <Button x:Name="loadCon2" Content="Load" Canvas.Left="878" Canvas.Top="644" Width="65" Click="loadCon2_Click"/>
+        </Canvas>
+    </Grid>
+</Window>
